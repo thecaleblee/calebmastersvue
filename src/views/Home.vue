@@ -1,32 +1,30 @@
 <template>
-  <hero v-bind="content"></hero>
+  <hero v-bind="heroContent"></hero>
+  <recent v-bind="recentContent"></recent>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import Hero from '@/components/Hero.vue';
-interface Content {
-  id: String, 
-  tagline: String,
-  emHeading: String, 
-  heading: String, 
-  talkingPoints: Array<String>,
-}
+import Hero from '@/components/Hero.vue'
+import Recent from '@/components/Recent.vue'
+import { RECENT } from '@/RecentData';
 
 export default defineComponent({
   name: 'Home',
   components: {
     Hero,
+    Recent,
   },
   data() {
     return {
-      content: {
+      heroContent: {
         id: 'hero',
         tagline: 'portfolio for',
         emHeading: 'Caleb',
         heading: 'Masters',
         talkingPoints: ['Front-End Engineer.', 'UX Promoter.', 'Hobby Collector.'],
-      } as Content
+      },
+      recentContent: RECENT,
     }
   }
 });

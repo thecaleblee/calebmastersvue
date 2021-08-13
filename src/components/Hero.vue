@@ -26,9 +26,10 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
+
 export default defineComponent({
   name: 'Hero',
-  props:{
+  props: {
     id: String, 
     tagline: String,
     emHeading: String, 
