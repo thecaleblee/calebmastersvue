@@ -1,22 +1,23 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld :msg="msg"/>
-  </div>
+  <hero :id="id" :tagline="tagline" :emHeading="emHeading" :heading="heading" :talkingPoints="talkingPoints"></hero>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
+import Hero from '@/components/Hero.vue';
 
 export default defineComponent({
   name: 'Home',
   components: {
-    HelloWorld,
+    Hero,
   },
   data() {
     return {
-      msg: 'Welcome to your vue app you dumb asshole'
+      id: 'hero',
+      tagline: 'portfolio for',
+      emHeading: 'Caleb',
+      heading: 'Masters',
+      talkingPoints: ['Front-End Engineer.', 'UX Promoter.', 'Hobby Collector.'],
     }
   }
 });
