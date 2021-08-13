@@ -1,5 +1,5 @@
 <template>
-  <section :id="id">
+ <section :id="id">
     <h1>
       <p>{{tagline}}</p>
       <span>{{emHeading}}</span> {{heading}}
@@ -26,15 +26,14 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-
 export default defineComponent({
   name: 'Hero',
-  props: {
+  props:{
     id: String, 
     tagline: String,
     emHeading: String, 
     heading: String, 
-    talkingPoints: Array 
+    talkingPoints: Array
   },
 })
 </script>
@@ -203,5 +202,4 @@ export default defineComponent({
     }
   }
 }
-
 </style>

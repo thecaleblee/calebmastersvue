@@ -1,10 +1,17 @@
 <template>
-  <hero :id="id" :tagline="tagline" :emHeading="emHeading" :heading="heading" :talkingPoints="talkingPoints"></hero>
+  <hero v-bind="content"></hero>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
 import Hero from '@/components/Hero.vue';
+interface Content {
+  id: String, 
+  tagline: String,
+  emHeading: String, 
+  heading: String, 
+  talkingPoints: Array<String>,
+}
 
 export default defineComponent({
   name: 'Home',
@@ -13,11 +20,13 @@ export default defineComponent({
   },
   data() {
     return {
-      id: 'hero',
-      tagline: 'portfolio for',
-      emHeading: 'Caleb',
-      heading: 'Masters',
-      talkingPoints: ['Front-End Engineer.', 'UX Promoter.', 'Hobby Collector.'],
+      content: {
+        id: 'hero',
+        tagline: 'portfolio for',
+        emHeading: 'Caleb',
+        heading: 'Masters',
+        talkingPoints: ['Front-End Engineer.', 'UX Promoter.', 'Hobby Collector.'],
+      } as Content
     }
   }
 });
