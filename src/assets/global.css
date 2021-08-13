@@ -1,0 +1,177 @@
+* {
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  font-weight: normal;
+}
+
+ul,
+ol {
+  padding: 0;
+}
+
+/* montserrat-900 - latin */
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url("./fonts/montserrat-v15-latin-900.eot"); /* IE9 Compat Modes */
+  src: local(""),
+    url("./fonts/montserrat-v15-latin-900.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("./fonts/montserrat-v15-latin-900.woff2") format("woff2"),
+    /* Super Modern Browsers */ url("./fonts/montserrat-v15-latin-900.woff")
+      format("woff"),
+    /* Modern Browsers */ url("./fonts/montserrat-v15-latin-900.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("./fonts/montserrat-v15-latin-900.svg#Montserrat") format("svg"); /* Legacy iOS */
+}
+
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  font-size: 17px;
+  font-size: 1.7rem;
+  line-height: 1.5;
+  font-display: optional;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+ol,
+ul {
+  list-style-type: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border: none;
+}
+
+/* Variables */
+:root {
+  --main-bg: #fff;
+  --main-theme: #129fa8;
+  --main-heading: #0f5b46;
+  --main-subheading: #13a895;
+  --main-text: #292f2d;
+  --main-footer: var(--main-text);
+  --main-footer-link: #aaacab;
+  --main-footer-text: var(--alt-secondary-text);
+  --secondary-bg: #d5ede6;
+  --secondary-text: #434b49;
+  --tertiary-bg: #ecf7f2;
+  --tertiary-text: #555a59;
+  --alt-main-bg: var(--main-text);
+  --alt-main-theme: #15bdc8;
+  --alt-secondary-bg: #334240;
+  --alt-secondary-text: #9fcfc8;
+}
+
+.container {
+  position: relative;
+}
+
+section {
+  width: 100%;
+}
+
+/* Styles for layout */
+#app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  height: auto;
+  color: var(--main-text);
+  background: var(--main-bg);
+}
+
+/* Typography */
+h1 {
+  font-size: 3.5rem;
+}
+
+h2 {
+  font-size: 2.8rem;
+}
+
+h3 {
+  font-size: 2.2rem;
+}
+
+h4 {
+  font-size: 1.7rem;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Montserrat";
+}
+
+h2 span {
+  font-size: 1.7rem;
+  display: block;
+  text-align: center;
+  font-weight: normal;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+
+h4 {
+  color: var(--tertiary-text);
+}
+
+h4 span {
+  color: var(--main-heading);
+  font-size: 1.5rem;
+}
+
+/* Global Styling */
+section {
+  padding: 6rem 1rem;
+  margin: 0;
+  position: relative;
+}
+
+article + article {
+  margin-top: 1.5rem;
+}
+
+.top {
+  display: block;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+
+@media screen and (min-width: 415px) {
+  .container {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: stretch;
+  }
+}
