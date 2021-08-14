@@ -1,4 +1,5 @@
 <template>
+  <hero v-bind="heroContent"></hero>
   <recent :content="recentContent"></recent>
   <skills :content="skillsContent"></skills>
 </template>
