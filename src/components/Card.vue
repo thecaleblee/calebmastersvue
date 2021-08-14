@@ -6,9 +6,9 @@
           {{ heading }}
         </h3>
         <h4 :item-prop="subheading">
-          <span>{{ subheading }} </span>
+          <span>{{ subheading }}&nbsp; </span>
           <template v-for="(item, idx) in techStack" :key="item">
-            {{ item.name }}<span v-if="idx + 1 === techStack.length">.</span><span v-else>,</span>
+            <template v-if="idx + 1 === techStack.length">{{ item.name }}.</template><template v-else>{{ item.name }}, </template>
           </template>
         </h4>
       </hgroup>

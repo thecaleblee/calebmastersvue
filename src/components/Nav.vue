@@ -59,8 +59,8 @@
             aria-disabled="true"
             class="active"
             @click.prevent
-            aria-label="Change Website Tech Stack to: Vue.js"
-            >Vue.js</a
+            aria-label="Change Website Tech Stack to: Vue.js/SCSS/TS"
+            >Vue.js/TS/SCSS</a
           >
         </li>
       </ul>

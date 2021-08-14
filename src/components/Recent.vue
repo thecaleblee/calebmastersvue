@@ -1,7 +1,9 @@
 <template>
-  <section :id="id">
-    <h2>{{heading}}</h2>
-    <card v-for="site in sites" v-bind="site" v-bind:key="site.id"></card> 
+  <section :id="content.id">
+    <div class="container">
+      <h2>{{content.heading}}</h2>
+      <card v-for="site in content.sites" v-bind="site" v-bind:key="site.id"></card> 
+    </div>
   </section>
 </template>
 
@@ -14,11 +16,7 @@ export default defineComponent({
   components: {
     Card,
   },
-  props: {
-    id: String,
-    heading: String,
-    sites: Array 
-  }
+  props: ['content']
 })
 </script>
 
@@ -70,7 +68,6 @@ export default defineComponent({
 
 @media screen and (min-width: 567px) {
   #recent-work {
-    a,
     h2 + a {
       margin-top: 0;
       flex: 1 calc(50% - 2rem);
@@ -86,11 +83,12 @@ export default defineComponent({
   #recent-work {
     h2 {
       margin-bottom: 4rem;
+    }
 
-      + a {
-        flex: 1 calc(33% - 2rem);
-      }
-    } 
+    a,
+    h2 + a {
+      flex: 1 calc(33% - 2rem);
+    }
   }
 }
 
@@ -105,7 +103,7 @@ export default defineComponent({
 @media screen and (min-width: 970px) {
   #recent-work a:last-child {
     display: block;
-    flex-basis: 33%;
+    flex-basis: calc(33% - 2rem);
   }
 }
 
