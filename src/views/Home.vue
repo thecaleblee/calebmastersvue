@@ -1,12 +1,13 @@
 <template>
-  <hero v-bind="heroContent"></hero>
   <recent :content="recentContent"></recent>
+  <skills :content="skillsContent"></skills>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
 import Hero from '@/components/Hero.vue'
 import Recent from '@/components/Recent.vue'
+import Skills from '@/components/Skills.vue'
 import { RECENT } from '@/RecentData'
 import { SKILLS } from '@/SkillsData'
 
@@ -15,6 +16,7 @@ export default defineComponent({
   components: {
     Hero,
     Recent,
+    Skills,
   },
   data() {
     return {
