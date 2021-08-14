@@ -1,5 +1,5 @@
 <template>
-  <a :href="link" :aria-label="al">
+  <a :href="link" :aria-label="al" :style="cssVars">
     <article>
       <hgroup>
         <h3 :aria-label="heading" itemProp="title">
@@ -17,7 +17,7 @@
   </a>
 </template>
 
-vue <script lang="ts">
+<script lang="ts">
 import { defineComponent } from 'vue'
 
 export default defineComponent({
@@ -31,6 +31,13 @@ export default defineComponent({
     techStack: Array,
     description: String,
   },
+  computed: {
+    cssVars() {
+      return {
+        '--background' : `url(${this.background})`,
+      }
+    }
+  }
 })
 </script>
 
@@ -82,7 +89,7 @@ export default defineComponent({
       }
     }
 
-    &::before {
+    &:before {
       border-bottom: 1px solid var(--tertiary-text);
       position: absolute;
       top: 0;
@@ -95,7 +102,7 @@ export default defineComponent({
       background-size: cover;
     }
 
-    &.this-website::before {
+    &.this-website:before {
       background: no-repeat 50% 20% var(--background);
       background-size: cover;
     }
@@ -108,27 +115,27 @@ export default defineComponent({
     }
   }
 
-@media screen and (min-width: 415px) {
-  a {
-    flex: 2 1 calc(50% - 2rem);
+  @media screen and (min-width: 415px) {
+    a {
+      flex: 2 1 calc(50% - 2rem);
 
-    &.top {
-      padding-right: 1.5rem;
+      &.top {
+        padding-right: 1.5rem;
+      }
     }
   }
-}
 
-@media screen and (min-width: 567px) {
-  a,
-  h2 + a {
-    margin-top: 0;
-    flex: 1 calc(50% - 2rem);
-  }
+  @media screen and (min-width: 567px) {
+    a,
+    h2 + a {
+      margin-top: 0;
+      flex: 1 calc(50% - 2rem);
+    }
 
-  .hide {
-    display: none;
+    .hide {
+      display: none;
+    }
   }
-}
 
 @media screen and (min-width: 784px) {
   a {

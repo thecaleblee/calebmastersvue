@@ -5,10 +5,10 @@
       <span>{{emHeading}}</span> {{heading}}
     </h1>
     <ul>
-        <li v-for="point of talkingPoints" :key="point">{{point}}</li>
+      <li v-for="point of talkingPoints" :key="point">{{point}}</li>
     </ul>
     <a
-      href="https://github.com/thecaleblee/calebmastersnext"
+      href="https://github.com/thecaleblee/calebmastersvue"
       aria-label="This websites code on Github"
       class="github"
       rel="noopener"
@@ -40,7 +40,6 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-/* Hero */
 #hero {
   min-height: 30vh;
   display: flex;
