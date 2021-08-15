@@ -1,8 +1,8 @@
 <template>
-<section>
-  <footer>
-    <h1>hello</h1>
-  </footer>
+  <section>
+    <footer>
+      <slot></slot>
+    </footer>
   </section>
 </template>
 
@@ -14,7 +14,7 @@ export default defineComponent({
 })
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 footer {
   flex-grow: 2;
   display: flex;

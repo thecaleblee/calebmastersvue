@@ -1,47 +1,49 @@
 <template>
-  <section :id="content.id">
-    <div class="container">
-      <h2>
-        {{content.heading}}
-        <span>{{content.subheading}}</span>
-      </h2>
-      <article>
-        <header>
-          <h2>
-            {{content.title}}
-            <span>
-              <a :href="content.downloadUrl" :aria-label="content.downloadText">
-                {{content.downloadText}}
-              </a>
-            </span>
-          </h2>
-          <p>{{content.contactText}}</p>
-          <p>
-            <a :href="content.url" :aria-label="content.al" target="_blank" rel="noopener">
-              {{content.urlText}}
+  <container :id="content.id">
+    <h2>
+      {{content.heading}}
+      <span>{{content.subheading}}</span>
+    </h2>
+    <article>
+      <header>
+        <h2>
+          {{content.title}}
+          <span>
+            <a :href="content.downloadUrl" :aria-label="content.downloadText">
+              {{content.downloadText}}
             </a>
-          </p>
-          <p>{{content.location}}</p>
-        </header>
-        <section>
-          <h3>Summary</h3>
-          <p>{{content.summary}}</p>
-        </section>
-      </article>
-    </div>
-  </section>
+          </span>
+        </h2>
+        <p>{{content.contactText}}</p>
+        <p>
+          <a :href="content.url" :aria-label="content.al" target="_blank" rel="noopener">
+            {{content.urlText}}
+          </a>
+        </p>
+        <p>{{content.location}}</p>
+      </header>
+      <section>
+        <h3>Summary</h3>
+        <p>{{content.summary}}</p>
+      </section>
+    </article>
+  </container>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
+import Container from './Container.vue'
 
 export default defineComponent({
   name: 'Resume',
-  props: ['content']
+  props: ['content'],
+  components: {
+    Container,
+  },
 })
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 #resume {
   background-color: var(--tertiary-bg);
   color: var(--main-heading);

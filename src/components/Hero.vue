@@ -1,5 +1,5 @@
 <template>
- <section :id="id">
+  <section :id="id">
     <h1>
       <p>{{tagline}}</p>
       <span>{{emHeading}}</span> {{heading}}

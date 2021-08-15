@@ -1,19 +1,19 @@
 <template>
-  <section :id="content.id">
-    <div class="container">
-      <h2>{{content.heading}}</h2>
-      <card v-for="site in content.sites" v-bind="site" v-bind:key="site.id"></card> 
-    </div>
-  </section>
+  <container :id="content.id">
+    <h2>{{content.heading}}</h2>
+    <card v-for="site in content.sites" v-bind="site" v-bind:key="site.id"></card> 
+  </container>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
+import Container from './Container.vue'
 import Card from './Card.vue' 
 
 export default defineComponent({
   name: 'Recent',
   components: {
+    Container,
     Card,
   },
   props: ['content']
