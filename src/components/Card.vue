@@ -1,17 +1,15 @@
 <template>
   <a :href="link" :aria-label="al" :style="cssVars">
     <article>
-      <hgroup>
-        <h3 :aria-label="heading" itemProp="title">
-          {{ heading }}
-        </h3>
-        <h4 :item-prop="subheading">
-          <span>{{ subheading }}&nbsp; </span>
-          <template v-for="(item, idx) in techStack" :key="item">
-            <template v-if="idx + 1 === techStack.length">{{ item.name }}.</template><template v-else>{{ item.name }}, </template>
-          </template>
-        </h4>
-      </hgroup>
+      <h3 :aria-label="heading" itemProp="title">
+        {{ heading }}
+      </h3>
+      <h4 :item-prop="subheading">
+        <span>{{ subheading }}&nbsp; </span>
+        <template v-for="(item, idx) in techStack" :key="item">
+          <template v-if="idx + 1 === techStack.length">{{ item.name }}.</template><template v-else>{{ item.name }}, </template>
+        </template>
+      </h4>
       <p>{{ description }}</p>
     </article>
   </a>

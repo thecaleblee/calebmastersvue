@@ -42,6 +42,11 @@ export default defineComponent({
     flex-flow: row wrap;
   }
 
+  .top {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   &:first-child a {
     margin-top: 2rem;
   }
@@ -75,6 +80,11 @@ export default defineComponent({
 
     .hide {
       display: none;
+    }
+
+    .top {
+      margin-left: inherit;
+      margin-right: inherit;
     }
   }
 }
