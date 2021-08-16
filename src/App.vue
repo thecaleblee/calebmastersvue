@@ -7,12 +7,10 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import Nav from '@/components/Nav.vue'
-import Footer from '@/components/Nav.vue'
 
 export default defineComponent({
   components: {
     Nav,
-    Footer,
   }
 })
 </script>
