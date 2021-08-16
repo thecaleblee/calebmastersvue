@@ -33,13 +33,14 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import Container from './Container.vue'
+import Axios from 'axios';
 
 export default defineComponent({
   name: 'Resume',
   props: ['content'],
   components: {
     Container,
-  },
+  }
 })
 </script>
 

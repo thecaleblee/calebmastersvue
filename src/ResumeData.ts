@@ -20,7 +20,7 @@ export const RESUME: Resume = {
   subheading: 'Me as a piece of paper',
   title: "Caleb Masters",
   downloadText: "download resumé pdf",
-  downloadUrl: "/assets/cmasters-2021-resume-one-page.pdf",
+  downloadUrl: "/cmasters-2021-resume-one-page.pdf",
   contactText: "Contact via Linkedin",
   urlText: "linkedin.com/in/caleb-masters-atx/",
   url: "https://www.linkedin.com/in/caleb-masters-atx/",

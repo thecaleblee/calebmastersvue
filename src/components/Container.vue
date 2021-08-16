@@ -3,7 +3,7 @@
     <div class="container">
       <slot></slot>
       <a
-        href="top"
+        href="#top"
         to="top"
         aria-label="Back to Top"
         class="top"
@@ -13,7 +13,7 @@
     </div>
   </section>
 </template>
-vue <script lang="ts">
+<script lang="ts">
 import { defineComponent } from 'vue'
 
 export default defineComponent({
