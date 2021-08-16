@@ -337,12 +337,14 @@ nav {
       margin-top: .2rem;
     }
 
-    &.tech {
-    margin-bottom: 1rem;
-    justify-content: flex-end;
-
-      a {
-        margin-right: 2rem;
+    ul {
+      &.tech {
+        margin-bottom: 1rem;
+        justify-content: flex-end;
+  
+        a {
+          margin-right: 2rem;
+        }
       }
     }
   }
