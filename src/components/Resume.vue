@@ -269,7 +269,7 @@ export default defineComponent({
         grid-template-rows: auto;
         grid-template-areas:
           "t t t t t t"
-          ". m1 m2 m2 m3 .";
+          "m1 m1 m2 m2 m3 m3";
         text-align: center;
 
         h2 {
