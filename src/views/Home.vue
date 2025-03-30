@@ -35,7 +35,7 @@ export default defineComponent({
         tagline: 'portfolio for',
         emHeading: 'Caleb',
         heading: 'Masters',
-        talkingPoints: ['Front-End Engineer.', 'UX Promoter.', 'Hobby Collector.'],
+        talkingPoints: ['Full-Stack Engineer.', 'UX Promoter.', 'Hobby Collector.'],
       },
       recentContent: RECENT,
       skillsContent: SKILLS,
